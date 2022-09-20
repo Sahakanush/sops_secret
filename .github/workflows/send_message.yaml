@@ -14,4 +14,4 @@ jobs:
       with:
         channel-id: '#as'
         status: ${{ job.status }}
-        slack-message: "GitHub build result: ${{ job.status }}
+        slack-message: "GitHub build result: ${{ job.status }}"

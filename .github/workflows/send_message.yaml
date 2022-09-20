@@ -8,10 +8,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Slack Notification
-      uses: act10ns/slack@v1
-      with: 
-          webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
-          status: ${{ job.status }}
-          channel: '#as'
-          message: Deploying {{ env.GITHUB_REF_NAME }} branch
-     
+      uses: slackapi/slack-github-action@v1.22.0
+      env:
+        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+      with:
+        channel-id: '#as'
+        status: ${{ job.status }}
+        slack-message: "GitHub build result: ${{ job.status }}

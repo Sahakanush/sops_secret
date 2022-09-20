@@ -12,6 +12,6 @@ jobs:
       env:
         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
       with:
-        channel-id: '#as'
+        channel-id: '#as'   
         status: ${{ job.status }}
         slack-message: "GitHub build result: ${{ job.status }}"

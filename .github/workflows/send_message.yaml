@@ -1,5 +1,11 @@
 name: GitHub Actions Demo
-on: [push]
+on:
+  workflow_dispatch:
+    inputs: 
+      workflow2_name:
+        description: 'Workflow2 Name for Triggering'
+        default: 'Workflow2'
+        
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest

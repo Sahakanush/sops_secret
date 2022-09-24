@@ -12,6 +12,6 @@ jobs:
         uses: mvasigh/dispatch-action@main
         with:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          repo: Sahakanush
-          owner: cache_app
+          repo: cache_app
+          owner: Sahakanush
           event_type: sample_push
